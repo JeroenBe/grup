@@ -1,0 +1,28 @@
+<template name="home">
+	{{#if currentUser}}
+		{{> groupList}}
+		{{> userCard}}
+		{{> logout}}
+	{{else}}
+		{{> login}}
+	{{/if}}
+</template>
+
+<template name="login">
+	<button id="loginWithFacebook">login with Facebook</button>
+	<p>(you kinda have to)</p>
+</template>
+
+<template name="groupList">
+	<p>some list</p>
+</template>
+
+<template name="logout">
+	<button id="logout">logout</button>
+</template>
+
+<template name="userCard">
+	{{#with currentUser.services.facebook}}
+		<p>name: {{name}}</p>
+	{{/with}}
+</template>
