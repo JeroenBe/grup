@@ -6,7 +6,7 @@
 Template.home.events({
 	'click #loginWithFacebook': function(ev, er){
 		ev.preventDefault()
-		Meteor.loginWithFacebook({}, function (er, res){
+		Meteor.loginWithFacebook({requestPermissions: ['user_managed_groups']}, function (er, res){
 			if(er){
 				console.log('problem when logging in')
 			}else{
