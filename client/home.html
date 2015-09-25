@@ -1,8 +1,9 @@
 <template name="home">
 	{{#if currentUser}}
-		{{> groupList}}
+		{{> groupList groups}}
 		{{> userCard}}
 		{{> logout}}
+		{{test}}
 	{{else}}
 		{{> login}}
 	{{/if}}
@@ -14,7 +15,9 @@
 </template>
 
 <template name="groupList">
-	<p>some list</p>
+	{{#each this}}
+		<a href="/group/{{this.id}}">{{this.name}}</a>
+	{{/each}}
 </template>
 
 <template name="logout">
