@@ -7,6 +7,8 @@ Meteor.methods({
 	},
 	getSpecificGroupData: function(groupId){
 		var facebook = Meteor.user().services.facebook 
+		console.log(fbGraphGet('458027187737198?fields=gender&access_token=' + facebook.accessToken))
+
 		return (fbGraphGet(groupId + '/members?access_token=' + facebook.accessToken)).data
 	}
 })

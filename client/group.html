@@ -1,5 +1,14 @@
 <template name="group">
-	{{#each member}}
-		<p>{{name}}</p>
+	<div class="ui six doubling cards">
+	{{#each member}}	
+		<div class="small card">
+			<div class="image">
+				<img src="http://graph.facebook.com/{{id}}/picture?width=400&height=400" alt="profile pic of {{name}}">
+			</div>
+			<div class="content">
+				<a href="http://facebook.com/{{id}}" target="blank" class="header"><i class="blue facebook icon"></i> {{name}}</a>
+			</div>
+		</div>	
 	{{/each}}
+	</div>
 </template>
