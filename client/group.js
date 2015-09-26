@@ -8,6 +8,7 @@ Template.group.onCreated(function(){
 			console.log(er)
 		}else{
 			group.set(res)
+			console.log(res)
 		}
 	})
 })

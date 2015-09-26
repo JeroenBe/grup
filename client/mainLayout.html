@@ -1,22 +1,27 @@
 <template name="mainLayout">
-	<div class="ui text menu">
-		<div class="item">
-			<a href="/">_GRUP_</a>
-		</div>
-		<div class="ui left dropdown item">
-			Browse Groups
-			<i class="dropdown icon"></i>
-			<div class="menu">
-				<div class="item">TODO</div>
-				<div class="item">TODO</div>
-				<div class="item">TODO</div>
-				<div class="item">TODO</div>
+	<div class="ui fixed menu">
+		<div class="ui container">
+			<div class="header item">
+				<a href="/">_GRUP_</a>
+			</div>
+			<div class="ui simple dropdown item">
+				Browse Groups
+				<i class="dropdown icon"></i>
+				<div class="menu">
+					{{#each groups}}
+					<a href="/group/{{id}}" class="item">
+						<div>{{name}}</div>
+					</a>
+					{{/each}}
+				</div>
+			</div>
+			<div class="item">
+
 			</div>
 		</div>
-		<div class="item">
-			
-		</div>
 	</div>
-		<!-- yield -->
-		{{> Template.dynamic template=content}}
+	<!-- yield -->
+	<div class="ui main text container">
+	{{> Template.dynamic template=content}}
+	</div>
 </template>

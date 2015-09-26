@@ -1,4 +1,4 @@
-var groups = new ReactiveVar(null)
+groups = new ReactiveVar(null)
 
 Template.home.onCreated(function (){
 	this.groups = groups
