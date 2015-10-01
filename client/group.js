@@ -16,5 +16,8 @@ Template.group.onCreated(function(){
 Template.group.helpers({
 	member: function(){
 		return Template.instance().group.get()
+	},
+	group: function(){
+		return Template
 	}
 })
